@@ -1,5 +1,6 @@
 package dev.canessaalvamiguel.springcleanarchitecture.adapter.in.web;
 
+import dev.canessaalvamiguel.springcleanarchitecture.application.port.in.ISendMoneyPort;
 import dev.canessaalvamiguel.springcleanarchitecture.application.port.in.SendMoneyCommand;
 import dev.canessaalvamiguel.springcleanarchitecture.application.service.SendMoneyService;
 import dev.canessaalvamiguel.springcleanarchitecture.common.WebAdapter;
@@ -13,7 +14,7 @@ import java.math.BigDecimal;
 @RestController
 public class MoneyTransferController {
 
-    private final SendMoneyService sendMoneyService;
+    private final ISendMoneyPort sendMoneyService;
 
     public MoneyTransferController(SendMoneyService sendMoneyService) {
         this.sendMoneyService = sendMoneyService;
